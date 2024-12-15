@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenêtre modale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styles pour la fenêtre modale */
+        .modal {
+            display: none; /* La fenêtre est cachée par défaut */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 1000;
+            border-radius: 8px;
+        }
+
+        /* Fond sombre pour le modal */
+        .modal-overlay {
+            display: none; /* Caché par défaut */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Bouton pour fermer */
+        .close-btn {
+            background: #ff5c5c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <button id="openModalBtn">Ouvrir la fenêtre</button>
+
+    <!-- Fenêtre modale -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="myModal">
+        <button class="close-btn" id="closeModalBtn">X</button>
+        <h2>Fenêtre Modale</h2>
+        <p>Ceci est une petite fenêtre modale !</p>
+    </div>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <p>ll</p>
+
+    <script>
+        // Sélection des éléments
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modal = document.getElementById('myModal');
+        const modalOverlay = document.getElementById('modalOverlay');
+
+        // Fonction pour ouvrir la fenêtre modale
+        openModalBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalOverlay.style.display = 'block';
+        });
+
+        // Fonction pour fermer la fenêtre modale
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+
+        // Fermer la fenêtre si on clique sur l'overlay
+        modalOverlay.addEventListener('click', () => {
+            modal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
